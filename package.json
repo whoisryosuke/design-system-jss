@@ -1,0 +1,38 @@
+{
+  "name": "design-system-jss",
+  "version": "1.0.0",
+  "description": "Boilerplate Design System using JSS and ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "dev": "npm run storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "keywords": [
+    "design",
+    "system",
+    "design",
+    "systems",
+    "component",
+    "system",
+    "jss",
+    "css",
+    "in",
+    "js"
+  ],
+  "author": "Ryosuke",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-options": "^3.4.10",
+    "@storybook/react": "^3.4.10",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+    },
+    "dependencies": {
+      "react-jss": "^8.6.1"
+    }
+}
