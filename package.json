@@ -9,16 +9,11 @@
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "keywords": [
-    "design",
-    "system",
-    "design",
-    "systems",
-    "component",
-    "system",
+    "design-system",
+    "design-systems",
+    "component-system",
     "jss",
-    "css",
-    "in",
-    "js"
+    "css-in-js",
   ],
   "author": "Ryosuke",
   "license": "MIT",
