@@ -6,14 +6,16 @@
   "scripts": {
     "build": "babel src -d lib",
     "dev": "npm run storybook",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "design-system",
     "design-systems",
     "component-system",
     "jss",
-    "css-in-js",
+    "css-in-js"
   ],
   "author": "Ryosuke",
   "license": "MIT",
@@ -24,10 +26,20 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.4.4",
+    "enzyme-adapter-react-16": "^1.2.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.5.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
-    },
-    "dependencies": {
-      "react-jss": "^8.6.1"
-    }
+  },
+  "dependencies": {
+    "react-jss": "^8.6.1"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>tests/setup/setupEnzyme.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/tests/setup/"
+    ]
+  }
 }
