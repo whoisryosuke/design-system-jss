@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 
 const styles = theme => ({
@@ -24,9 +25,20 @@ const styles = theme => ({
 // Define the component using these styles and pass it the 'classes' prop.
 // Use this to assign scoped class names.
 const Button = ({ classes, children }) => (
-  <button className={classes.myButton}>
+  <button type="button" className={classes.myButton}>
     <span className={classes.myLabel}>{children}</span>
   </button>
 );
 
-export default injectSheet(styles)(Button)
+Button.propTypes = {
+  classes: PropTypes.shape({
+    myButton: PropTypes.string.isRequired,
+    myLabel: PropTypes.string.isRequired
+  }).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
+};
+
+export default injectSheet(styles)(Button);
