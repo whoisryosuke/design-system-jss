@@ -6,6 +6,8 @@
   "scripts": {
     "build": "babel src -d lib",
     "dev": "npm run storybook",
+    "docs": "npx styleguidist server",
+    "docs:build": "npx styleguidist build",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -25,6 +27,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.4.4",
@@ -40,7 +43,9 @@
     "prettier": "1.14.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "react-styleguidist": "^7.2.4",
+    "webpack": "^4.16.5"
   },
   "peerDependencies": {
     "react": "^16.4.2",

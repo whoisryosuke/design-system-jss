@@ -22,8 +22,10 @@ const styles = theme => ({
   }
 });
 
-// Define the component using these styles and pass it the 'classes' prop.
-// Use this to assign scoped class names.
+/**
+ * Button
+ *
+ */
 const Button = ({ classes, children }) => (
   <button type="button" className={classes.myButton}>
     <span className={classes.myLabel}>{children}</span>
@@ -31,10 +33,17 @@ const Button = ({ classes, children }) => (
 );
 
 Button.propTypes = {
+  /**
+   * CSS Class names provided by JSS
+   */
   classes: PropTypes.shape({
     myButton: PropTypes.string.isRequired,
     myLabel: PropTypes.string.isRequired
   }).isRequired,
+
+  /**
+   * Child components (array or single element)
+   */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
