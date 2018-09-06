@@ -1,0 +1,29 @@
+{
+  "config": {
+    "title": "Design System Jss",
+    "description": "Boilerplate Design System using JSS and ReactJS",
+    "themeConfig": {},
+    "ordering": "descending",
+    "version": "1.0.0",
+    "repository": null
+  },
+  "entries": {
+    "src/components/Button/Button.mdx": {
+      "name": "Hello world",
+      "id": "2b773349a016959194c905ce6ad9d2d4",
+      "filepath": "src/components/Button/Button.mdx",
+      "link": null,
+      "slug": "src-components-button-button",
+      "route": "/src-components-button-button",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "hello-world",
+          "value": "Hello world"
+        }
+      ]
+    }
+  }
+}
