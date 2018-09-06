@@ -1,5 +1,5 @@
-[
-  {
+{
+  "components": [{
     "description": "Button",
     "displayName": "Button",
     "methods": [],
@@ -24,8 +24,7 @@
       "children": {
         "type": {
           "name": "union",
-          "value": [
-            {
+          "value": [{
               "name": "arrayOf",
               "value": {
                 "name": "node"
@@ -41,5 +40,5 @@
       }
     },
     "filename": "/components/Button/Button.js"
-  }
-]
+  }]
+}
