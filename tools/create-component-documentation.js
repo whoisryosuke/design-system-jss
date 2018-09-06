@@ -12,7 +12,6 @@ function pushComponent(component) {
 }
 
 function createComponentFile() {
-  console.log(componentDataArray);
   const componentJsonArray = JSON.stringify(componentDataArray, null, 2);
   fs.writeFile(componentJsonPath, componentJsonArray, "utf8", (err, data) => {
     if (err) {
@@ -78,9 +77,6 @@ function filewalker(dir, done) {
       fs.stat(file, async (err, stat) => {
         // If directory, execute a recursive call
         if (stat && stat.isDirectory()) {
-          // Add directory to array [comment if you need to remove the directories from the array]
-          // results.push(file);
-
           filewalker(file, (err, res) => {
             results = results.concat(res);
             if (!--pending) done(null, results);
@@ -109,8 +105,6 @@ filewalker(componentFolder, (err, data) => {
   if (err) {
     throw err;
   }
-
-  // console.log(data);
 
   createComponentFile();
 });
