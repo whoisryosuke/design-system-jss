@@ -1,0 +1,45 @@
+[
+  {
+    "description": "Button",
+    "displayName": "Button",
+    "methods": [],
+    "props": {
+      "classes": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "myButton": {
+              "name": "string",
+              "required": true
+            },
+            "myLabel": {
+              "name": "string",
+              "required": true
+            }
+          }
+        },
+        "required": true,
+        "description": "CSS Class names provided by JSS"
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": true,
+        "description": "Child components (array or single element)"
+      }
+    },
+    "filename": "/components/Button/Button.js"
+  }
+]

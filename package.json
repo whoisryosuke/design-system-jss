@@ -52,6 +52,7 @@
     "prop-types": "^15.6.2"
   },
   "dependencies": {
+    "react-docgen": "^2.21.0",
     "react-jss": "^8.6.1"
   },
   "jest": {
