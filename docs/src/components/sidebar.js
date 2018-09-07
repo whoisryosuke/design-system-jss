@@ -11,7 +11,13 @@ const Sidebar = ({ active, components, sidebarPages }) => (
       : ''}
     <strong>Components:</strong>
     {components
-      ? components.map(component => <Link>{component.displayName}</Link>)
+      ? components.map(component => (
+        <Link
+          to={`${component.node.frontmatter.menu.toLowerCase()}/${component.node.parent.name.toLowerCase()}`}
+        >
+          {capitalize(component.node.parent.name)}
+        </Link>
+        ))
       : ''}
   </nav>
 )

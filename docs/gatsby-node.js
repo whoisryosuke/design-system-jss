@@ -44,7 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
           createPage({
-            path: `/${node.frontmatter.menu}/${node.parent.name}`,
+            path: `/${node.frontmatter.menu.toLowerCase()}/${node.parent.name.toLowerCase()}`,
             component: componentWithMDXScope(
               path.resolve('./src/templates/posts.js'),
               node.code.scope
