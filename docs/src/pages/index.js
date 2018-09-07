@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => (
         for, and how to get started with it. Like any good index page, it should
         provide clear navigation to key parts of the website.
       </p>
-      <button>Get Started</button>
+      <button className="btn">Get Started</button>
       <h2>Design System Benefits</h2>
       <p>
         Explain how the design system benefits users and the business. For

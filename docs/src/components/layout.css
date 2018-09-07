@@ -718,9 +718,18 @@ pre tt:after {
 }
 
 /*--- Layout Styles ---**/
+/*--- Button ---**/
+.btn {
+  background: rebeccapurple;
+  color: #FFF;
+  padding: 0.7em 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+}
+
 /*--- Header ---**/
 .Header {
-  background: red;
+  background: rebeccapurple;
   height: 80px;
   display: flex;
 }
