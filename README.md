@@ -35,6 +35,25 @@ In terms of actual dependencies, we only have React-JSS, since it's used in the 
 - /components/ComponentName/index.js - contains exports of all components in folder
 - .babelrc - env and react Babel presets.
 
+## Documentation
+
+### Getting Started
+
+1. Generate new JSON file containing component docs from the project: `npm run docs:generate`
+1. Run the documentation development server: `cd docs && npm run develop`
+
+### Process
+
+The documentation is built using a combination of GatsbyJS and React-Docgen. A JSON file of all the component documentation is generated with a Node script that uses react-docgen. React-docgen parses components for any JSDoc formatted comments and props, and the Node script saves this output to a JSON file (`docs/data/components.json`).
+
+GatsbyJS works by creates a GraphQL data layer using the JSON, and then generates the static documentation from the GraphQL. Running the Gatsby build process creates pages for each component, Markdown files, and any Gatsby page components.
+
+### Editing the Sidebar
+
+The sidebar links are generated from the pages array inside `docs/data/sidebar.json`. The array accepts page objects with slug and title parameters (`[ { slug: '/about', title: 'About' }]`).
+
+You can always just override these inside `docs/src/components/sidebar.js`. @todo: Add a render-prop override.
+
 ## Todo
 
 ### High Priority
