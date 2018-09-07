@@ -44,7 +44,10 @@ class Layout extends React.Component {
               edges {
                 node {
                   sidebar {
-                    pages
+                    pages {
+                      slug
+                      title
+                    }
                   }
                 }
               }
