@@ -36,7 +36,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allDataJson {
+    allJsonJson {
       edges {
         node {
           components {

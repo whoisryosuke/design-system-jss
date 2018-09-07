@@ -29,7 +29,7 @@ class Layout extends React.Component {
               }
             }
 
-            components: allDataJson {
+            components: allJsonJson {
               edges {
                 node {
                   components {
@@ -40,7 +40,7 @@ class Layout extends React.Component {
               }
             }
 
-            sidebarPages: allDataJson {
+            sidebarPages: allJsonJson {
               edges {
                 node {
                   sidebar {

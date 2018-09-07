@@ -4,6 +4,15 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        defaultLayouts: {
+          posts: require.resolve('./src/templates/posts.js'),
+          default: require.resolve('./src/templates/page-default.js'),
+        },
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-twitter`,
     {
@@ -13,7 +22,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/data/`,
+        path: `${__dirname}/content/json`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `mdx`,
+        path: `${__dirname}/content/mdx`,
       },
     },
     // {
