@@ -8,6 +8,7 @@
     "dev": "npm run storybook",
     "docs": "npx styleguidist server",
     "docs:build": "npx styleguidist build",
+    "docs:generate": "node tools/create-component-documentation.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest",
     "test:watch": "jest --watch"
