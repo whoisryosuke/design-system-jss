@@ -1,6 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Documentation Starter',
+    sidebar: {
+      pages: [
+        {
+          slug: '/about',
+          title: 'about',
+        },
+      ],
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,7 +37,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `mdx`,
-        path: `${__dirname}/content/mdx`,
+        path: `../src/components/`,
       },
     },
     // {

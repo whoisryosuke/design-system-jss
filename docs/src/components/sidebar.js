@@ -4,9 +4,9 @@ import capitalize from '../tools/capitalize'
 
 const Sidebar = ({ active, components, sidebarPages }) => (
   <nav className={`Sidebar ${active ? 'visible' : ''}`}>
-    {sidebarPages[0]
-      ? sidebarPages[0].node.sidebar.pages.map(sidebarPage => (
-        <Link href={sidebarPage.slug}>{capitalize(sidebarPage.title)}</Link>
+    {sidebarPages
+      ? sidebarPages.map(sidebarPage => (
+        <Link to={sidebarPage.slug}>{capitalize(sidebarPage.title)}</Link>
         ))
       : ''}
     <strong>Components:</strong>

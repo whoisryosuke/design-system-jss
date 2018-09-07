@@ -26,28 +26,31 @@ class Layout extends React.Component {
             site {
               siteMetadata {
                 title
-              }
-            }
-
-            components: allJsonJson {
-              edges {
-                node {
-                  components {
-                    displayName
-                    filename
+                sidebar {
+                  pages {
+                    slug
+                    title
                   }
                 }
               }
             }
 
-            sidebarPages: allJsonJson {
+            components: allMdx {
               edges {
                 node {
-                  sidebar {
-                    pages {
-                      slug
-                      title
+                  id
+                  frontmatter {
+                    menu
+                    title
+                  }
+                  parent {
+                    ... on File {
+                      name
+                      sourceInstanceName
                     }
+                  }
+                  code {
+                    scope
                   }
                 }
               }
@@ -59,8 +62,15 @@ class Layout extends React.Component {
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'Sample' },
-                { name: 'keywords', content: 'sample, something' },
+                {
+                  name: 'description',
+                  content:
+                    'Template for creating design system documentatation',
+                },
+                {
+                  name: 'keywords',
+                  content: 'design system, style guide, documentation',
+                },
               ]}
             >
               <html lang="en" />
@@ -73,10 +83,8 @@ class Layout extends React.Component {
             <Sidebar
               active={active}
               toggleSidebar={this.toggleSidebar}
-              components={data.components.edges[0].node.components}
-              sidebarPages={data.sidebarPages.edges.filter(
-                sidebarPage => sidebarPage.node.sidebar !== null
-              )}
+              components={data.components.edges}
+              sidebarPages={data.site.siteMetadata.sidebar.pages}
             />
             <div className="ContentArea">{children}</div>
           </>
