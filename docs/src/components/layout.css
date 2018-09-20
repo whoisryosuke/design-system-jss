@@ -720,6 +720,7 @@ pre tt:after {
 /*--- Layout Styles ---**/
 /*--- Button ---**/
 .btn {
+  display: inline-block;
   background: rebeccapurple;
   color: #FFF;
   padding: 0.7em 1em;
