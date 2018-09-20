@@ -23,7 +23,7 @@ const styles = theme => ({
 });
 
 /**
- * Button
+ * Button description
  *
  */
 const Button = ({ classes, children }) => (
