@@ -142,6 +142,7 @@ module.exports = {
         respectDNT: true,
       },
     },
+    `gatsby-transformer-react-docgen`,
     `gatsby-plugin-offline`,
   ],
 }

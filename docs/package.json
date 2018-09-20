@@ -25,6 +25,7 @@
     "gatsby-remark-smartypants": "next",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-json": "next",
+    "gatsby-transformer-react-docgen": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
     "markdown-it": "^8.4.2",
