@@ -6,7 +6,6 @@ import { ThemeProvider } from 'react-jss'
 import theme from '../../../src/theme/theme'
 import Layout from '../components/layout'
 
-import ButtonProps from '../../content/json/components.json'
 import PropsTable from '../components/propstable'
 
 export default class MDXRuntimeTest extends Component {
