@@ -25,8 +25,8 @@ const PropsTable = props => {
           const prop = propMetaData[key]
           return (
             <tr key={key}>
-              <td style={{ color: 'rgb(17, 147, 154)' }}>{key}</td>
-              <td>{prop.type ? prop.type.name : ''}</td>
+              <td style={{ color: 'rgb(17, 147, 154)' }}>{prop.name}</td>
+              <td>{prop.parentType ? prop.parentType.name : ''}</td>
               {prop.required ? (
                 <td style={{ color: 'rgb(255, 76, 34)' }}>required</td>
               ) : (
@@ -39,7 +39,7 @@ const PropsTable = props => {
               ) : (
                 <td style={{ color: '#c6c6c6' }}>none</td>
               )}
-              {prop.description ? <td>{prop.description}</td> : <td />}
+              {prop.docblock ? <td>{prop.docblock}</td> : <td />}
             </tr>
           )
         })}
