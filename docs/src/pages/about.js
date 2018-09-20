@@ -20,28 +20,3 @@ const AboutPage = ({ data }) => (
 )
 
 export default AboutPage
-
-export const pageQuery = graphql`
-  query {
-    allJsonJson {
-      edges {
-        node {
-          components {
-            description
-            displayName
-            filename
-            props {
-              classes {
-                type {
-                  name
-                }
-                required
-                description
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`

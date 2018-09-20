@@ -19,6 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   id
                   frontmatter {
+                    name
                     menu
                     title
                   }
@@ -42,14 +43,17 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
         // Create blog posts pages.
-        result.data.allMdx.edges.forEach(({ node }) => {
+        result.data.allMdx.edges.forEach(async ({ node }) => {
           createPage({
             path: `/${node.frontmatter.menu.toLowerCase()}/${node.parent.name.toLowerCase()}`,
             component: componentWithMDXScope(
               path.resolve('./src/templates/posts.js'),
               node.code.scope
             ),
-            context: { id: node.id },
+            context: {
+              id: node.id,
+              name: node.frontmatter.name,
+            },
           })
         })
       })

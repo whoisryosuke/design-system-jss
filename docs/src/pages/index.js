@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => (
         for, and how to get started with it. Like any good index page, it should
         provide clear navigation to key parts of the website.
       </p>
-      <button className="btn">Get Started</button>
+      <Link className="btn">Get Started</Link>
       <h2>Design System Benefits</h2>
       <p>
         Explain how the design system benefits users and the business. For
@@ -33,28 +33,3 @@ const IndexPage = ({ data }) => (
 )
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query {
-    allJsonJson {
-      edges {
-        node {
-          components {
-            description
-            displayName
-            filename
-            props {
-              classes {
-                type {
-                  name
-                }
-                required
-                description
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
